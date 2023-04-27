@@ -1,5 +1,27 @@
+@use "../variables"
+
 .startHome
     background: url(../img/banner.png) no-repeat
-    height: 70vh
+    height: 100vh
     background-position: center
     background-size: cover
+
+
+.services
+    .container
+        display: grid
+        grid-template-columns: repeat(3, 0.69fr)
+        margin: 0 auto
+        width: 100%
+        max-width: variables.$max-Width
+        gap: 1.4rem
+        .box
+            border: .1rem solid #111     
+            padding: 1.5rem   
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr 2fr
+            i
+                font-size: 5rem
+            h2
+                font-size: 1.7rem
