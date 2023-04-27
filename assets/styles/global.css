@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  line-height: 1.2;
+  line-height: 1.6;
   letter-spacing: 0.2rem;
 }
 
@@ -40,11 +40,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 1026px) {
+@media (max-width: 1028px) {
   section {
-    padding: 0 4%;
+    padding: 2rem 4% !important;
   }
 }
 
@@ -52,6 +53,21 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+
+.noneDesketop {
+  display: none;
+}
+@media (max-width: 789px) {
+  .noneDesketop {
+    display: block;
+  }
+}
+
+@media (max-width: 789px) {
+  .noneMobile {
+    display: none;
+  }
 }
 
 #logo {
@@ -90,6 +106,9 @@ body {
   background-size: cover;
 }
 
+.services {
+  padding: 2rem 0;
+}
 .services .container {
   display: grid;
   grid-template-columns: repeat(3, 0.69fr);
@@ -98,18 +117,93 @@ body {
   max-width: 1024px;
   gap: 1.4rem;
 }
+@media (max-width: 991px) {
+  .services .container {
+    grid-template-columns: repeat(2, 0.69fr);
+  }
+}
+@media (max-width: 680px) {
+  .services .container {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
 .services .container .box {
-  border: 0.1rem solid #111;
+  border: 0.1rem solid #4E019E;
   padding: 1.5rem;
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 1fr 2fr;
+  gap: 1.2rem;
+  transition: transform 0.7s ease;
+}
+.services .container .box:hover i {
+  transform: scale(1.2);
+}
+.services .container .box i, .services .container .box h2, .services .container .box p {
+  color: #4E019E;
 }
 .services .container .box i {
   font-size: 5rem;
 }
 .services .container .box h2 {
   font-size: 1.7rem;
+}
+.services .container .box p {
+  font-size: 1.4rem;
+}
+
+.footerMain {
+  padding: 2rem;
+  background: #2b3035;
+}
+.footerMain .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 850px) {
+  .footerMain .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footerMain .container .descSite a {
+  font-size: 3rem;
+}
+.footerMain .container .descSite p {
+  max-width: 250px;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.footerMain .container span {
+  font-size: 1.2rem;
+}
+.footerMain .container .socialMedia .containerIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+.footerMain .container .socialMedia .containerIcons a {
+  font-size: 1.6rem;
+  margin-left: 0.7rem;
+}
+.footerMain .container .socialMedia .boreder {
+  height: 0.1rem;
+  width: 200px;
+  background: #8C939A;
+  margin-bottom: 0.6rem;
+}
+
+.footerMain a, .footerMain p, .footerMain span {
+  color: #8C939A;
+}
+.footerMain a:hover, .footerMain p:hover, .footerMain span:hover {
+  color: #fff;
 }
 
 /*# sourceMappingURL=global.css.map */
