@@ -77,6 +77,26 @@ img {
   object-fit: cover;
 }
 
+.btn {
+  padding: 0.6rem 1.5rem;
+  display: inline-flex;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 0.1rem solid #111;
+  margin: 0.6rem 0;
+  transition: transform 0.9s ease;
+}
+.btn:hover {
+  transition: none;
+  transform: scale(1.1);
+}
+
+.maxW {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
 #logo {
   font-size: 2.3rem;
   font-weight: bold;
@@ -99,9 +119,6 @@ img {
   left: 0;
 }
 .header .container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1024px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,24 +141,24 @@ img {
 .services .container {
   display: grid;
   grid-template-columns: repeat(3, 0.69fr);
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1024px;
   gap: 1.4rem;
 }
 @media (max-width: 991px) {
   .services .container {
     grid-template-columns: repeat(2, 0.69fr);
+    gap: 1.4rem;
   }
 }
 @media (max-width: 680px) {
   .services .container {
     grid-template-columns: repeat(1, 100%);
+    gap: 1.4rem;
   }
 }
 .services .container .box {
   border: 0.1rem solid #4E019E;
   padding: 1.5rem;
+  /* display: flex, and align-items: center*/
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -164,9 +181,6 @@ img {
 }
 
 .descrptions .container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1024px;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -179,6 +193,7 @@ img {
 @media (max-width: 720px) {
   .descrptions .container .card {
     grid-template-columns: repeat(1, 100%);
+    gap: 3rem;
   }
 }
 .descrptions .container .card .img {
@@ -195,6 +210,7 @@ img {
 }
 .descrptions .container .card .content p {
   font-size: 1.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .footerMain {
@@ -202,17 +218,15 @@ img {
   background: #2b3035;
 }
 .footerMain .container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1024px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 850px) {
   .footerMain .container {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
   }
 }
@@ -221,12 +235,12 @@ img {
 }
 .footerMain .container .descSite p {
   max-width: 250px;
-  font-size: 1.1rem;
   width: 100%;
+  font-size: 1.1rem;
   margin-bottom: 0.7rem;
 }
 .footerMain .container span {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 .footerMain .container .socialMedia .containerIcons {
   display: flex;
@@ -240,7 +254,8 @@ img {
 }
 .footerMain .container .socialMedia .boreder {
   height: 0.1rem;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   background: #8C939A;
   margin-bottom: 0.6rem;
 }

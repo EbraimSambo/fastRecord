@@ -13,20 +13,16 @@
     padding: 2rem 0
     .container
         display: grid
-        grid-template-columns: repeat(3, 0.69fr)
+        @include functions.gridRepeat(3, 0.69fr, 1.4rem)
         @include functions.responsive(991px)
-            grid-template-columns: repeat(2, 0.69fr)
+            @include functions.gridRepeat(2, 0.69fr, 1.4rem)
         @include functions.responsive(680px)
-            grid-template-columns: repeat(1, 100%)
-        margin: 0 auto
-        width: 100%
-        max-width: variables.$max-Width
-        gap: 1.4rem
+            @include functions.gridRepeat(1, 100%, 1.4rem)
+ 
         .box
             border: .1rem solid variables.$rocho    
-            padding: 1.5rem   
-            display: flex
-            align-items: center
+            padding: 1.5rem
+            @include functions.fc()
             gap: 1.2rem
             transition: transform .7s ease
             &:hover
@@ -43,18 +39,13 @@
 
 .descrptions
     .container
-        width: 100%
-        margin: 0 auto
-        max-width: variables.$max-Width
-        display: flex
-        flex-direction: column
+        @include functions.ffcnm()
         gap: 4rem
         .card
             display: grid
-            grid-template-columns: repeat(2, 0.78fr)
+            @include functions.gridRepeat(2, 0.78fr, 3rem)
             @include functions.responsive(720px)
-                grid-template-columns: repeat(1, 100%)
-            gap: 3rem
+                @include functions.gridRepeat(1, 100%, 3rem)
             .img
                 height: 400px
             &:nth-child(even)
@@ -65,4 +56,5 @@
                     font-size: 2.3rem
                 p
                     font-size: 1.4rem
+                    margin-bottom: 1.6rem
 

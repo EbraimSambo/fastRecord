@@ -4,39 +4,31 @@
     padding: 2rem
     background: #2b3035
     .container
-        margin: 0 auto
-        width: 100%
-        max-width: variables.$max-Width
-        display: flex
-        align-items: center
-        justify-content: space-between
+        @include functions.fcb()
         @include functions.responsive(850px)
-            flex-direction: column
-            justify-content: center
+            @include functions.ffcnm()
+            justify-content: space-between
             text-align: center
         .descSite
             a
                 font-size: 3rem
             p
-                max-width: 250px
+                @include functions.ctrlMaxWidth(250px)
                 font-size: 1.1rem
-                width: 100%
                 margin-bottom: .7rem
         span
-            font-size: 1.2rem
+            font-size: .9rem
 
         .socialMedia
             .containerIcons
-                display: flex
-                align-items: center
-                justify-content: center
+                @include functions.fcc()
                 margin-bottom: 0.8rem
                 a
                     font-size: 1.6rem
                     margin-left: 0.7rem
             .boreder
                 height: 0.1rem
-                width: 200px
+                @include functions.ctrlMaxWidth(200px)
                 background: #8C939A
                 margin-bottom: 0.6rem
 

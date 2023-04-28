@@ -3,5 +3,28 @@
         @content
     
 
-@mixin name()
-    grid-template-columns: repeat(2, 0.78fr)
+@mixin gridRepeat($n, $w, $g)
+    grid-template-columns: repeat($n, $w)
+    gap: $g
+
+@mixin ctrlMaxWidth($w)
+    max-width: $w
+    width: 100%
+
+@mixin fc()
+    /* display: flex, and align-items: center*/
+    display: flex
+    align-items: center
+
+@mixin ffcnm()
+    display: flex
+    flex-direction: column
+@mixin fcb()
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+@mixin fcc()
+    display: flex
+    align-items: center
+    justify-content: center
