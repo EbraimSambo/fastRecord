@@ -81,6 +81,11 @@ img {
   font-size: 2.3rem;
   font-weight: bold;
 }
+@media (max-width: 419px) {
+  #logo span {
+    display: none;
+  }
+}
 
 #logo, .header nav a {
   color: #fff;

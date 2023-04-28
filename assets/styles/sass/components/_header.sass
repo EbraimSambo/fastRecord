@@ -1,7 +1,12 @@
 @use "../variables"
+@use "../functions"
 #logo
     font-size: 2.3rem
     font-weight: bold
+    span
+        @include functions.responsive(419px)
+            display: none
+
 #logo, .header nav a
     color: #fff
 
