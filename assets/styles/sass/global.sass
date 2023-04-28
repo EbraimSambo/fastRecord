@@ -8,6 +8,7 @@
     list-style-type: none
     line-height: 1.6
     letter-spacing: 0.2rem
+    text-size-adjust: 100%
     
 
 html
@@ -47,3 +48,8 @@ section
 .noneMobile
     @include functions.responsive(789px)
         display: none
+
+img
+    width: 100%
+    height: 100%
+    object-fit: cover

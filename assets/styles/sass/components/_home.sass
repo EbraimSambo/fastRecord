@@ -40,3 +40,29 @@
                 font-size: 1.7rem
             p
                 font-size: 1.4rem
+
+.descrptions
+    .container
+        width: 100%
+        margin: 0 auto
+        max-width: variables.$max-Width
+        display: flex
+        flex-direction: column
+        gap: 4rem
+        .card
+            display: grid
+            grid-template-columns: repeat(2, 0.78fr)
+            @include functions.responsive(720px)
+                grid-template-columns: repeat(1, 100%)
+            gap: 3rem
+            .img
+                height: 400px
+            &:nth-child(even)
+                direction: rtl
+            .content
+                padding-top: 2.5rem
+                h2
+                    font-size: 2.3rem
+                p
+                    font-size: 1.4rem
+
